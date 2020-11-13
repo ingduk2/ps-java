@@ -159,3 +159,6 @@ Temporary Items
 .apdisk
 
 # End of https://www.toptal.com/developers/gitignore/api/macos,java,intellij
+
+/src/ps/test
+test.txt
