@@ -50,10 +50,6 @@ public class Q12978 {
     public static int[] distance;
 
     public int solution(int N, int[][] road, int K) {
-        int answer = 0;
-
-        int m = road.length;
-
         graph = new ArrayList<>();
         for (int i = 0; i < N + 1; i++) {
             graph.add(new ArrayList<>());
