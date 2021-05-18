@@ -1,4 +1,4 @@
-package ps.baekjoon.bruteforce;
+package ps.baekjoon.testprepare.part2;
 
 import java.io.BufferedReader;
 import java.io.IOException;
