@@ -10,6 +10,8 @@ import java.util.StringTokenizer;
 /**
  * 나이순 정렬
  * https://www.acmicpc.net/problem/10814
+ *
+ * 정렬
  */
 public class Q10814 {
 
@@ -25,8 +27,6 @@ public class Q10814 {
         }
 
     }
-
-
 
     public static void main(String[] args) {
         Input in = new Input();
