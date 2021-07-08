@@ -55,6 +55,7 @@ public class Q1145 {
         public int nextInt() {
             return Integer.parseInt(next());
         }
+
     }
 }
 
