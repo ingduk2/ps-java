@@ -23,3 +23,6 @@ java Problem Solving
 >   {n,} : 앞의문자 n개 이상, ex [.]{2,}  
 >   ^ : 문자열시작, $ : 문자열끝, ex ^[.]|[.]$  
 #### 
+
+### java project -> gradle project
+* [intellij Java Project -> Gradle Project](https://velog.io/@viiviii/IntelliJ-Java-%ED%94%84%EB%A1%9C%EC%A0%9D%ED%8A%B8%EB%A5%BC-Gradle-%ED%94%84%EB%A1%9C%EC%A0%9D%ED%8A%B8%EB%A1%9C-%EB%B0%94%EA%BE%B8%EA%B8%B0)
