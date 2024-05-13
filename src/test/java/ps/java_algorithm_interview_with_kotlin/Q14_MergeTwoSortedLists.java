@@ -3,8 +3,11 @@ package ps.java_algorithm_interview_with_kotlin;
 import org.junit.jupiter.params.ParameterizedTest;
 import org.junit.jupiter.params.provider.Arguments;
 import org.junit.jupiter.params.provider.MethodSource;
+import ps.java_algorithm_interview_with_kotlin.leetcode.ListNode;
 
 import java.util.stream.Stream;
+
+import static ps.java_algorithm_interview_with_kotlin.leetcode.AssertionsLeetCode.assertListNode;
 
 /**
  * https://leetcode.com/problems/merge-two-sorted-lists/
@@ -13,22 +16,6 @@ import java.util.stream.Stream;
  * 1. 재귀 구조로 연결
  */
 public class Q14_MergeTwoSortedLists {
-    public static class ListNode {
-        int val;
-        ListNode next;
-
-        ListNode() {
-        }
-
-        ListNode(int val) {
-            this.val = val;
-        }
-
-        ListNode(int val, ListNode next) {
-            this.val = val;
-            this.next = next;
-        }
-    }
 
     public ListNode mergeTwoLists(ListNode list1, ListNode list2) {
         if (list1 == null) return list2;
@@ -79,27 +66,8 @@ public class Q14_MergeTwoSortedLists {
     @MethodSource("arguments")
     void test(ListNode list1, ListNode list2, ListNode expected) {
         ListNode result = new Q14_MergeTwoSortedLists().mergeTwoLists(list1, list2);
-        printListNode(result);
-        printListNode(expected);
+        result.printListNode();
+        expected.printListNode();
         assertListNode(result, expected);
-    }
-
-    private void printListNode(ListNode node) {
-        ListNode print = node;
-        while (print != null) {
-            System.out.print(print.val + " ");
-            print = print.next;
-        }
-        System.out.println();
-    }
-
-    private static void assertListNode(ListNode result, ListNode expected) {
-        while (result != null && expected != null) {
-            if (result.val != expected.val) {
-                throw new RuntimeException();
-            }
-            result = result.next;
-            expected = expected.next;
-        }
     }
 }

@@ -3,6 +3,7 @@ package ps.java_algorithm_interview_with_kotlin;
 import org.junit.jupiter.params.ParameterizedTest;
 import org.junit.jupiter.params.provider.Arguments;
 import org.junit.jupiter.params.provider.MethodSource;
+import ps.java_algorithm_interview_with_kotlin.leetcode.ListNode;
 
 import java.util.*;
 import java.util.stream.Stream;
@@ -17,23 +18,6 @@ import static org.assertj.core.api.Assertions.assertThat;
  * 4. Runner
  */
 public class Q13_PalindromeLinkedList {
-    public static class ListNode {
-        int val;
-        ListNode next;
-
-        ListNode() {
-        }
-
-        ListNode(int val) {
-            this.val = val;
-        }
-
-        ListNode(int val, ListNode next) {
-            this.val = val;
-            this.next = next;
-        }
-    }
-
 
     static class ListTwoPointer {
         public boolean isPalindrome(ListNode head) {

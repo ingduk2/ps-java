@@ -3,8 +3,11 @@ package ps.java_algorithm_interview_with_kotlin;
 import org.junit.jupiter.params.ParameterizedTest;
 import org.junit.jupiter.params.provider.Arguments;
 import org.junit.jupiter.params.provider.MethodSource;
+import ps.java_algorithm_interview_with_kotlin.leetcode.ListNode;
 
 import java.util.stream.Stream;
+
+import static ps.java_algorithm_interview_with_kotlin.leetcode.AssertionsLeetCode.assertListNode;
 
 /**
  * https://leetcode.com/problems/reverse-linked-list/
@@ -19,22 +22,6 @@ import java.util.stream.Stream;
  * node = next;               2,3,4,5   | 3,4,5    | 4,5        | 5           | null
  */
 public class Q15_ReverseLinkedList {
-    public static class ListNode {
-        int val;
-        ListNode next;
-
-        ListNode() {
-        }
-
-        ListNode(int val) {
-            this.val = val;
-        }
-
-        ListNode(int val, ListNode next) {
-            this.val = val;
-            this.next = next;
-        }
-    }
 
     public ListNode reverseList(ListNode head) {
         ListNode reverse = null;
@@ -83,27 +70,8 @@ public class Q15_ReverseLinkedList {
     @MethodSource("arguments")
     void test(ListNode head, ListNode expected) {
         ListNode result = new Q15_ReverseLinkedList().reverseList(head);
-        printListNode(result);
-        printListNode(expected);
+        result.printListNode();
+        expected.printListNode();
         assertListNode(result, expected);
-    }
-
-    private void printListNode(ListNode node) {
-        ListNode print = node;
-        while (print != null) {
-            System.out.print(print.val + " ");
-            print = print.next;
-        }
-        System.out.println();
-    }
-
-    private static void assertListNode(ListNode result, ListNode expected) {
-        while (result != null && expected != null) {
-            if (result.val != expected.val) {
-                throw new RuntimeException();
-            }
-            result = result.next;
-            expected = expected.next;
-        }
     }
 }
