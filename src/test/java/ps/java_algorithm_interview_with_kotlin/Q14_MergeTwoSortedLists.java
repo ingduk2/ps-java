@@ -50,12 +50,12 @@ public class Q14_MergeTwoSortedLists {
                                 4))))))
                 ),
                 Arguments.of(
-                        new ListNode(),
-                        new ListNode(),
-                        new ListNode()
+                        null,
+                        null,
+                        null
                 ),
                 Arguments.of(
-                        new ListNode(),
+                        null,
                         new ListNode(0),
                         new ListNode(0)
                 )
@@ -66,8 +66,6 @@ public class Q14_MergeTwoSortedLists {
     @MethodSource("arguments")
     void test(ListNode list1, ListNode list2, ListNode expected) {
         ListNode result = new Q14_MergeTwoSortedLists().mergeTwoLists(list1, list2);
-        result.printListNode();
-        expected.printListNode();
         assertListNode(result, expected);
     }
 }
