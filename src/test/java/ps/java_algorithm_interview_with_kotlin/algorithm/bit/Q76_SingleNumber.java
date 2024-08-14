@@ -19,7 +19,7 @@ import static org.assertj.core.api.Assertions.assertThat;
  * - xor 은 값이 다르면 true, 같으면 false
  * - 두 번 등장하면 0이 된다
  */
-public class Q79_SingleNumber {
+public class Q76_SingleNumber {
 
     static class Solution1 {
         public int singleNumber(int[] nums) {
